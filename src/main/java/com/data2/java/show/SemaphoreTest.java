@@ -9,8 +9,6 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.concurrent.BrokenBarrierException;
 import java.util.concurrent.CyclicBarrier;
-import java.util.concurrent.TimeUnit;
-import java.util.concurrent.TimeoutException;
 
 
 /**
@@ -21,7 +19,7 @@ import java.util.concurrent.TimeoutException;
 @Slf4j
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class CyclicBarrierTest {
+public class SemaphoreTest {
 
     @Test
     public void test() throws InterruptedException {

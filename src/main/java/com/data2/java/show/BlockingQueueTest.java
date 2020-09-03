@@ -13,6 +13,20 @@ import java.util.concurrent.*;
  * @author leewow
  * @description
  * @date 2020/9/3 上午10:16
+ *
+ * 生产者消费者实现方式 - not full put; not empty take
+ *      1、Synchronize & 对象的wait\notify方法
+ *      2、ReentrantLock condition
+ *      3、阻塞队列BlockingQueue
+ *
+ * 阻塞队列分类：
+ *      1、ArrayBlockingQueue - 数组实现的有界队列
+ *      2、PriorityBlockingQueue - 优先级阻塞队列
+ *      3、DelayQueue - 延时队列
+ *          场景1：缓存系统
+ *          场景2：定时任务
+ *
+ * put offer add ; take poll get 区别
  */
 @RunWith(SpringRunner.class)
 @Slf4j

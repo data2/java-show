@@ -19,7 +19,11 @@ import java.util.concurrent.PriorityBlockingQueue;
 public class PriorityBlockingQueueTest {
     @Test
     public void test(){
-        PriorityBlockingQueue queue = new PriorityBlockingQueue();
+        /**
+         * JDK 中无界优先级阻塞队列PriorityBlockingQueue内部使用堆算法保证每次出队都是优先级最高的元素
+         */
+//        PriorityBlockingQueue queue = new PriorityBlockingQueue(10,true);
+
 
     }
 }

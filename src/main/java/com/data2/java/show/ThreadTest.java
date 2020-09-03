@@ -20,7 +20,7 @@ import java.util.concurrent.*;
 @SpringBootTest
 public class ThreadTest {
     @Test
-    public void test() throws InterruptedException, ExecutionException {
+    public void testThreadPool() throws InterruptedException, ExecutionException {
         // 不建议Executors创建线程池方式！ 明确线程池运行规则，避免资源耗尽。
         // Executors创建的线程池对象允许最大请求的线程数为Integer.MAX_VALUE,有可能导致OOM
         // ExecutorService executorService = Executors.newFixedThreadPool(10);
@@ -61,5 +61,11 @@ public class ThreadTest {
         }
 
         
+    }
+
+    @Test
+    public void testThreadStauts(){
+        log.info("{},{},{},{}",Thread.State.NEW, Thread.State.RUNNABLE, Thread.State.BLOCKED,
+                Thread.State.TERMINATED);
     }
 }

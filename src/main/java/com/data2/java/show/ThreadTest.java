@@ -26,11 +26,9 @@ public class ThreadTest {
         // ExecutorService executorService = Executors.newFixedThreadPool(10);
         // ExecutorService executorService1 = Executors.newCachedThreadPool();
 
-        BlockingQueue<Runnable> blockingQueue = new ArrayBlockingQueue(10);
-
         ThreadPoolExecutor pool = new ThreadPoolExecutor(
                 10,20,60, TimeUnit.SECONDS,
-                blockingQueue, new ThreadPoolExecutor.DiscardPolicy());
+                new ArrayBlockingQueue(10), new ThreadPoolExecutor.DiscardPolicy());
 
         pool.execute(new Runnable() {
             @Override

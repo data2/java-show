@@ -25,8 +25,20 @@ import java.util.concurrent.*;
  *      3、DelayQueue - 延时队列
  *          场景1：缓存系统
  *          场景2：定时任务
+ *          场景3：实现订单超时关闭
  *
- * put offer add ; take poll get 区别
+ * 入队方法
+ *      put:队列满则阻塞
+ *      offer:队列满则插入失败，返回false
+ *      add:队列满则抛出异常，IllegalStateException
+ * 出队方法
+ *      take:队列空则阻塞，移除并返回队列头部元素
+ *      poll:队列空则返回null，移除并返回队列头部元素
+ *      remove: 队列空则抛出异常NoSuchElementException，移除并返回队列头部元素
+ *
+ *      peek：队列空则返回null，返回队列头部元素
+ *      element:队列空抛出异常NoSuchElementException，返回队列头部元素
+ *
  */
 @RunWith(SpringRunner.class)
 @Slf4j

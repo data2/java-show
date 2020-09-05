@@ -26,7 +26,7 @@ public class CglibAsmEnhancerTest {
     @Test
     public void test(){
         Enhancer enhancer = new Enhancer();
-        enhancer.setSuperclass(AtomicLongTest.class);
+        enhancer.setSuperclass(CglibAsmEnhancerTest.class);
         enhancer.setClassLoader(getClass().getClassLoader());
         enhancer.setCallback(new MethodInterceptor() {
             @Override
@@ -37,13 +37,13 @@ public class CglibAsmEnhancerTest {
 
 
         });
-        AtomicLongTest test = (AtomicLongTest) enhancer.create();
-        test.test();
+        CglibAsmEnhancerTest test = (CglibAsmEnhancerTest) enhancer.create();
+        test.bingo("apple");
     }
 
-
-
-
+    public void bingo(String what){
+        log.info("bingo,{}",what);
+    }
 
 
 }

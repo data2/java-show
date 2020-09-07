@@ -13,6 +13,9 @@ import java.util.List;
  * @author leewow
  * @description
  * @date 2020/9/7 上午11:29
+ *
+ * 观察者模式:当一个对象的状态发生改变时， 所有依赖于它的对象都得到通知并被自动更新
+ *      使用场景：
  */
 @RunWith(SpringRunner.class)
 @SpringBootTest

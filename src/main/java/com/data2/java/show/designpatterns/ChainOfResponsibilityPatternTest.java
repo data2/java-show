@@ -11,6 +11,12 @@ import org.springframework.test.context.junit4.SpringRunner;
  * @author leewow
  * @description
  * @date 2020/9/7 上午10:44
+ *
+ * 责任链模式：每个具体处理器都实现统一接口，每个接受者都包含下一个接受者的引用，从而形成链
+ *      使用场景：
+ *          1、spring filter
+ *          2、审批流程
+ *
  */
 @RunWith(SpringRunner.class)
 @SpringBootTest

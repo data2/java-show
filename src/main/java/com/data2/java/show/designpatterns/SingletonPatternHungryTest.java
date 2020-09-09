@@ -20,7 +20,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 public class SingletonPatternHungryTest {
 
     // 静态变量 饿汉模式-类加载初始化
-    static SingletonPatternHungryTest singletonPatternHungryTest = new SingletonPatternHungryTest();
+    static SingletonPatternHungryTest single = new SingletonPatternHungryTest();
 
     // 私有构造器
     private SingletonPatternHungryTest(){
@@ -28,7 +28,7 @@ public class SingletonPatternHungryTest {
 
     // 全局唯一访问点
     public static SingletonPatternHungryTest getInstance(){
-        return singletonPatternHungryTest;
+        return single;
     }
 
     @Test

@@ -13,6 +13,7 @@ import lombok.NoArgsConstructor;
 public class TreeNode {
     private int key;
     private int value;
+    private TreeNode parent;
     private TreeNode left;
     private TreeNode right;
 

@@ -43,6 +43,9 @@ public class BST {
         midTraversal(root);
 
 
+        midTraversal(delete(root, 25));
+
+
     }
 
 

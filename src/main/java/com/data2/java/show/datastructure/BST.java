@@ -18,6 +18,8 @@ import java.util.Random;
  *      若它的右子树不空，则右子树上所有结点的值均大于它的根结点的值；
  *      它的左、右子树也分别为二叉排序树。
  *      没有键值相等的节点
+ *
+ * 二叉查找树查找节点所需要的次数不超过树的高度 - 二分查找
  */
 @RunWith(SpringRunner.class)
 @SpringBootTest

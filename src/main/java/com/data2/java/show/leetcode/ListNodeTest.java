@@ -12,8 +12,9 @@ import java.util.Stack;
  * @author leewow
  * @description
  * @date 2020/9/12 下午3:37
+ *
+ * 链表反转 - 辅助栈
  */
-
 @RunWith(SpringRunner.class)
 @SpringBootTest
 @Slf4j
@@ -33,8 +34,6 @@ public class ListNodeTest {
         for (int k: reverse2(first)){
             System.out.println(k);
         }
-
-
 
     }
 
